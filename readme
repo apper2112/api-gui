@@ -1,0 +1,44 @@
+Author:A.Greenhalgh
+
+LICENCE: I hereby grant anyone to do what they want with it apart from
+Geri Halliwell and anyone who likes celery.
+
+This is an api gui template which is tailored to suit the Marvel api.
+You just need to change the field string entries to suit your api of choice.
+Works with json only at present.
+If you want this example to work then you need to register at marvel.com to
+recieve your own keys.
+
+-------------------------------------------------
+
+TO USE:
+1. FILL IN THE ENTRY FIELDS AND CLICK SUBMIT
+The top left panel displays your main json api output
+
+2. CLICK ON URL-CHECK BUTTON
+Show urls in bottom right panel
+
+3. CLICK ON ANY URL THEN CLICK SUBMIT URL BUTTON
+Shows json output in bottom left panel
+
+------------------------------------------------
+
+Python code could be improved but programming is not my day job. It works though
+
+COPY AND PASTE YOUR OWN KEYS INTO GUI ENTRY FIELDS
+THESE ARE DUMMY KEYS AND WONT WORK 
+
+addr(address field): 			https://gateway.marvel.com/v1/public/comics
+api_key(API-Key field): 		5d6a04addd6d488ef905d5e546500e9e
+auth_hash(Key-Hash field):	 	7a3faf70e970082900k233faff2a857a
+			
+HASH IN PYTHON3 FOR MARVEL API EXAMPLE, GOES LIKE THIS md5(1+PRIVATEkey+PUBLICkey), 1 is ts=1
+
+md5Hash = hashlib.md5("15d6a04addd6d488ef905d5e546500e9e7a3faf70e970082900k233faff2a857a".encode('utf-8')).hexdigest()
+print(md5Hash)
+
+final_md5Hash = '25ee320e1649471570e7946cddb2328d'
+			
+THIS IS THE COMPLETE URL AFTER HASHING THAT YOU CAN TEST IN YOUR BROWSER WITH YOUR OWN KEYS
+
+'https://gateway.marvel.com/v1/public/comics?ts=1&apikey=5d6a04addd6d488ef905d5e546500e9e&hash=25ee320e1649471570e7946cddb2328d'
