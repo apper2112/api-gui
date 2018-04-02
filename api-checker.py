@@ -1,15 +1,16 @@
 #!usr/bin/env python
 
 import json
-from urllib.request import urlopen # PYTHON 3
 import hashlib
 
 try:
 	from Tkinter import *	# PYTHON 2
 	import tkFont
+	from urllib2 import urlopen
 except ImportError:
 	from tkinter import *	# PYTHON 3
 	import tkinter.font as tkFont
+	from urllib.request import urlopen
 	
 	
 class Window(Frame):
@@ -103,7 +104,7 @@ class Window(Frame):
 
 		# RIGHT PANEL BOTTOM SCROLLBAR
 		sb3 = Scrollbar(rf)
-		sb3.pack(side=RIGHT, ipady=83)
+		sb3.pack(side=RIGHT, ipady=85)
 		self.lb_tasksbt.configure(yscrollcommand=sb3.set)
 		sb3.configure(command=self.lb_tasksbt.yview)
 
@@ -195,6 +196,7 @@ class Window(Frame):
 
 root = Tk()
 root.geometry("1280x720")
+#root.configure(background='black')
 root.resizable(0, 0)
 app = Window(root)
 root.mainloop()
