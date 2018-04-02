@@ -9,21 +9,28 @@ Works with json only at present.
 If you want this example to work then you need to register at marvel.com to
 recieve your own keys.
 
+Tested on laptop with 1920 x 1080 screen resolution.
+If your gui looks belly up try the following:
+
+a) Scroll to bottom of script and change root.geometry("1280x720") to whatever.
+b) Uncomment root.configure(background='black') to see whats going on.
+c) Play about with widget heights and padding. The fun part.
+d) If you know how to make the gui dynamic please let us know.
 -------------------------------------------------
 
 TO USE:
 1. FILL IN THE ENTRY FIELDS AND CLICK SUBMIT
-The top left panel displays your main json api output
+The top left panel displays your main json api output.
 
 2. CLICK ON URL-CHECK BUTTON
-Show urls in bottom right panel
+Show urls in bottom right panel.
 
 3. CLICK ON ANY URL THEN CLICK SUBMIT URL BUTTON
-Shows json output in bottom left panel
+Shows json output in bottom left panel.
 
 ------------------------------------------------
 
-Python code could be improved but programming is not my day job. It works though
+Python code could be improved but programming is not my day job. It works though.
 
 COPY AND PASTE YOUR OWN KEYS INTO GUI ENTRY FIELDS
 THESE ARE DUMMY KEYS AND WONT WORK 
@@ -39,6 +46,6 @@ print(md5Hash)
 
 final_md5Hash = '25ee320e1649471570e7946cddb2328d'
 			
-THIS IS THE COMPLETE URL AFTER HASHING THAT YOU CAN TEST IN YOUR BROWSER WITH YOUR OWN KEYS
+THIS IS THE COMPLETE URL AFTER HASHING THAT YOU CAN TEST IN YOUR BROWSER USING YOUR OWN KEYS
 
 'https://gateway.marvel.com/v1/public/comics?ts=1&apikey=5d6a04addd6d488ef905d5e546500e9e&hash=25ee320e1649471570e7946cddb2328d'
