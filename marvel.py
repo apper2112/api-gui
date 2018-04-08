@@ -21,7 +21,7 @@ for item in json_data['data']['results']: #[key][list]
 		list1 = new.values()
 		list2 = [x for x in list1 if x != []]
 
-	outputWriter.writerow(list2)
+		outputWriter.writerow(list2)
 
 sourceFile.close()
 outputFile.close()
