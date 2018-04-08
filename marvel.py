@@ -16,10 +16,9 @@ sourceFile = open(filea, 'rU')
 json_data = json.load(sourceFile)
 	
 for item in json_data['data']['results']: #[key][list]
-	row_array = []
 	for new in item['characters']['items']: #[key][list]
-		list1 = new.values()
-		list2 = [x for x in list1 if x != []]
+		dicto1 = new.values()
+		list2 = [x for x in dicto1 if x != []]
 
 		outputWriter.writerow(list2)
 
